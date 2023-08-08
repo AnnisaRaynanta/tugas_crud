@@ -3,7 +3,7 @@ import {Sequelize} from "sequelize";
 
  const {DataTypes} = Sequelize;
 
- const pengaduan = db.define('pengaduan',{
+ const petugas = db.define('petugas',{
     id_petugas: DataTypes.INTEGER,
     nama_petugas: DataTypes.DATEONLY,
     username: DataTypes.STRING,
@@ -14,7 +14,7 @@ import {Sequelize} from "sequelize";
     freezeTableName: true
  });
 
- export default pengaduan;
+ export default petugas;
 
 
 (async()=>{

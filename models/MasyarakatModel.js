@@ -3,11 +3,10 @@ import {Sequelize} from "sequelize";
 
  const {DataTypes} = Sequelize;
 
- const pengaduan = db.define('pengaduan',{
+ const masyarakat = db.define('masyarakat',{
     nik: {
         type: DataTypes.STRING,
         primaryKey: true
-    
     },
     nama: DataTypes.STRING,
     username: DataTypes.STRING,
@@ -18,7 +17,7 @@ import {Sequelize} from "sequelize";
     freezeTableName: true
  });
 
- export default pengaduan;
+ export default masyarakat;
 
 
 (async()=>{

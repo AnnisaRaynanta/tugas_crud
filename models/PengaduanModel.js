@@ -4,12 +4,19 @@ import {Sequelize} from "sequelize";
  const {DataTypes} = Sequelize;
 
  const pengaduan = db.define('pengaduan',{
-    id_pengaduan: DataTypes.INTEGER,
-    tgl_pengaduan: DataTypes.DATEONLY,
+    id_pengaduan:{
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+    },
+    tgl_pengaduan: {
+      type: DataTypes.DATEONLY,
+      defaultValue: DataTypes.NOW
+    },
     nik: DataTypes.CHAR,
     isi_laporan: DataTypes.TEXT,
     foto: DataTypes.STRING,
-    status: DataTypes.ENUM("0", "proses", "selesai")
+    status: DataTypes.STRING
  },{
     freezeTableName: true
  });
